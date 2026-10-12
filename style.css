@@ -1,0 +1,434 @@
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("fonts/CormorantInfant-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("fonts/CormorantInfant-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("font/CormorantInfant-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Cormorant Infant";
+    src: url("font/CormorantInfant-SemiBold.ttf");
+    font-weight: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Infant', serif;
+}
+html{
+    font-size: 25px;
+    font-weight: 400;
+}
+h1{
+    font-size: 8rem;
+    font-weight: 300;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+nav{
+    position: fixed;
+    width: 120px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    box-shadow: -5px 0 10px;
+    z-index: 10;
+    text-align: center;
+    background: white;
+}
+nav a{
+    margin-top: 30px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+nav img{
+    transition: 0.3s;
+}
+nav a:hover img{
+    background: rgba(141, 69, 69, 1);
+}
+nav a::before{
+    position: absolute;
+    background: rgba(141, 69, 69, 1);
+    left: 20px;
+    top: 20%;
+    width: 0;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    overflow: hidden;
+}
+nav a:nth-of-type(1)::before{
+    content: "Главная";
+}
+nav a:nth-of-type(2)::before{
+    content: "История";
+}
+nav a:nth-of-type(3)::before{
+    content: "Этапы";
+}
+nav a:nth-of-type(4)::before{
+    content: "Модели";
+}
+nav a:hover::before{
+    width: 150px;
+    left: -165px;
+    transition: 0.3s;
+
+}
+
+
+
+
+
+
+
+
+
+header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - 120px);
+}
+header h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    letter-spacing: 100px;
+    padding-left: 100px;
+    color: rgba(120, 120, 120, 1);
+}
+.header-button{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.header-button a{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    line-height: 100px;
+    transform: translateX(-50%);
+    z-index: 11;
+    text-decoration: none;
+    background: rgba(141, 69, 69, 1);
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 10px;
+}
+.header-img:nth-of-type(1){
+    position: absolute;
+    top: 80px;
+    left: -70px;
+    z-index: 10;
+}
+.header-img:nth-of-type(2){
+    position: absolute;
+    top: 80px;
+    right: -70px;
+    z-index: 10;
+}
+.header-video{
+    width: 100%;
+    height: 88%;
+    object-fit: cover;
+}
+.header-contant{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    top: 5%;
+    left: 0;
+}
+.header-contant:hover .header-top{
+    top: -51%;
+}
+.header-contant:hover .header-bottom{
+    bottom: -51%;
+}
+.header-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 51%;
+    background: white;
+    transition: 0.3s;
+}
+.header-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 51%;
+    background: white;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+.history{
+    padding: 100px 0;
+    width: calc(100% - 120px);
+}
+.history-container{
+    height: 600px;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    border: 2px solid black;
+    padding: 15px;
+}
+.history-left{
+    width: 50%;
+    height: 100%;
+    padding-right: 10px;
+}
+.history-left h2::first-letter{
+    font-size: 4rem;
+}
+.history-left p{
+    margin-top: 25px;
+}
+.history-left p::first-line{
+    font-weight: 900;
+}
+.history-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.history-cars{
+    width: 100%;
+    display: flex;
+    animation: 10s cars linear infinite;
+}
+.history-cars img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+.stages{
+    padding: 100px 0;
+    width: calc(100% - 120px);
+}
+.stages h2{
+    padding-bottom: 40px;
+}
+.stages-container{
+    height: 200px;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid black;
+}
+.stages-window{
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+.stages-list li{
+    padding: 5px 0;
+    font-size: 35px;
+    height: 50px;
+    line-height: 50px;
+}
+.stages-list {
+    /* list-style-image: none; */
+    width: 100%;
+    animation: 10s stages linear infinite;
+}
+.stages-list span{
+    color: rgba(132, 132, 132, 1);
+}
+/* д/з доделать */
+
+
+
+
+
+
+
+
+.models{
+    padding: 100px 0;
+    width: calc(100% - 120px);
+}
+.models-container{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 40px;
+    border: 2px solid black;
+    padding: 20px 15px;
+}
+.models-container h2{
+    padding-bottom: 40px;
+    text-align: center;
+
+}
+.models-cars{
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+}
+.models-cars:nth-of-type(2n+1){
+    display: flex;
+    justify-content: flex-end;
+}
+.models-card{
+    position: absolute;
+    box-shadow: 0 0 10px black;
+    max-width: 450px;
+    width: 100%;
+    padding: 50px 20px;
+    background: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.models-card h3{
+    text-align: center;
+}
+.models-card::before{
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+}
+.models-card::after{
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.models-card:hover::before{
+    width: 100%;
+}
+.models-card:hover::after{
+    width: 100%;
+}
+.models-card p::first-letter{
+    font-size: 1.6rem;
+}
+.models-cars:nth-of-type(2n+1) .models-card{
+    left: 130px;
+}
+.models-cars:nth-of-type(2n) .models-card{
+    right: 130px;
+}
+
+
+
+
+
+
+footer{
+    padding: 100px 0;
+    width: calc(100% - 120px);
+}
+.footer-container{
+    max-width: 1300px;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+.footer-container:hover{
+    color: white;
+    background: rgba(120, 120, 120, 1);
+    height: 650px;
+    max-width: 1400px;
+    width: 100%;
+}
+.footer-container:hover h2::first-letter{
+    font-size: 4rem;
+}
+.footer-container:hover h2{
+    font-size: 2.5rem;
+}
+.footer-container h2::first-letter{
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+@keyframes cars{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+@keyframes stages{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-350px);
+    }
+}
